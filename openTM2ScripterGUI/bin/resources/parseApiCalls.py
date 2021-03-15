@@ -34,9 +34,9 @@ class Command(BasePart):
         el = doc.createElement(self.tagname)
         self.setAttributes(el)
         for p in self.parameters:
-	    if p.type != "hsession":
-		pEl = p.toXmlElement(doc)
-		el.appendChild(pEl)
+            if p.type != "hsession":
+                pEl = p.toXmlElement(doc)
+                el.appendChild(pEl)
         return el
         
     def setAttributes(self, el):
@@ -64,7 +64,7 @@ class Parameter(BasePart):
         if self.optional:
             el.setAttribute("optional", "true")
         if self.type != "psz":
-	    el.setAttribute("type", self.type)
+            el.setAttribute("type", self.type)
    
 def parseScripterBlock(file):
      line = file.readline()
@@ -111,7 +111,7 @@ def parseCommand(line, comments, file):
         return None
     line = line.strip()
     if line != "(":
-        print "Malformed command starting with \"%s\"" % line
+        #print "Malformed command starting with \"%s\"" % line
         return None
     line = file.readline()
     paras = []
@@ -131,7 +131,7 @@ def parseCommand(line, comments, file):
 def parseParameter(line):
     parts = line.split(None, 2)
     if len(parts) < 2:
-        print "Malformed line \"%s\"" % line
+        #print "Malformed line \"%s\"" % line
         return None
     name = parts[1][0:-1] if parts[1][-1] == "," else parts[1]
     comment = ["maned", ""]
@@ -162,7 +162,7 @@ def parseParameter(line):
         
         comment = desc.strip().split(":", 1)
         if len(comment) < 2:
-            print "Malformed comment \"%s\"" % comment
+            #print "Malformed comment \"%s\"" % comment
             return None
     
     optional = True if comment[0] == "opt" else False
@@ -195,20 +195,20 @@ def getOpenTM2Version():
             items = line.strip('\n').split(' ')
             totalItems = len(items)
             if totalItems<3:
-			    continue
+                continue
             version = items[totalItems-1].strip('"')
-            print version
+            #print version
             fout = open(r'..\openTM2ScripterGUI\resources\OpenTM2Version.info','w')
             fout.writelines(version)
             fout.close()
     fin.close()
-	
+
 if __name__ == "__main__":
     # get OpenTM2 version
     getOpenTM2Version()
-	# run parse commands
+    # run parse commands
     if len(sys.argv) < 3:
-        print "Usage: %s [COMMANDS_XML] [HEADER_FILE]" % sys.argv[0]
+        #print "Usage: %s [COMMANDS_XML] [HEADER_FILE]" % sys.argv[0]
         sys.exit()
     
     try:
@@ -223,7 +223,7 @@ if __name__ == "__main__":
         writer.write(cmdDoc.documentElement.toprettyxml("  ", "\n", "utf-8"))
         writer.close()
         header.close()
-        print "commands.xml build done."
+        #print "commands.xml build done."
     except:
-        print "Couldn't read file"
+        #print "Couldn't read file"
         traceback.print_exc(file=sys.stdout)

@@ -2277,7 +2277,7 @@ __declspec(dllexport) CHAR* get_aszFontFacesGlobal();
   }
 
 //  #define POSTEDITSEGBOUND_SEGDATA "¯"
-  #define POSTEDITSEGBOUND_SEGDATA '¯'
+  #define POSTEDITSEGBOUND_SEGDATA '?'
   #define POSTEDITSEGBOUND_SEGDATA_GREEK1 '\x0f'
   #define POSTEDITSEGBOUND_SEGDATA_GREEK2 '\x15'
   #define POSTEDITSEGBOUND_SEGDATA_DBCS   '\xA4'

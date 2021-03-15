@@ -2348,7 +2348,7 @@ int CMTEval::WriteMTMetaData( CXmlWriter *pWriter, PSZ_W pszMetaData )
   pszNameStart = pszMetaData;
   while ( *pszNameStart != 0 )
   {
-    if ( (*pszNameStart == L'“' ) || (*pszNameStart == L'”') || (*pszNameStart == L'“' ) || (*pszNameStart == L'„') )
+     if ( (*pszNameStart == L'¡°' ) || (*pszNameStart == L'¡±') || (*pszNameStart == L'¡°' ) || (*pszNameStart == L'?') )
     {
       *pszNameStart = '\"';
     }

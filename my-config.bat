@@ -13,9 +13,9 @@ rem
 rem Drive of OpenTM2 source
 set _DRIVE=E:
 rem OpenTM2 source root directory
-set _DEVDIR=OpenTM2Community\opentm2
+set _DEVDIR=opentm2community-backup
 rem Drive letter of VisualStudio and Windows SDK installation
-set _COMP=C:
+set _COMP=E:
 
 rem tool for OS/2 format message file creation
 set _MSG_MAKER=C:\TOOLS\MSMSGF.EXE
@@ -30,19 +30,19 @@ set vclib=%_COMP%\program files (x86)\Microsoft Visual Studio 10.0\vc\LIB;%_COMP
 set VCINCLUDE=%_COMP%\program files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE;%_COMP%\program files (x86)\Microsoft Visual Studio 10.0\vc\MFC\INCLUDE;%_DRIVE%\%_DEVDIR%winincl;%_COMP%\program files (x86)\Microsoft Visual Studio 10.0\VC\atlmfc\include;%_windowssdk%\Include
 
 rem settings for Axis2/C + staff package
-SET AXIS2C_HOME=E:\WS\axis2c
-SET STAFF_HOME=E:\WS\staff
-SET _AXIS2C_INCL=E:\ws\axis2c\include
+SET AXIS2C_HOME=E:\axis2c
+SET STAFF_HOME=C:\staff
+SET _AXIS2C_INCL=E:\axis2c\include
 
 rem settings for NSIS installer
 SET _NSISMAKE_EXE="C:\Program Files (x86)\NSIS\makensis"
 
 rem settings for ICU
-SET _ICU_INCL=E:\OpenTM2Dev\icu\include
-SET ICULIB=E:\OpenTM2Dev\icu\lib
+SET _ICU_INCL=E:\%_DEVDIR%\icu\include
+SET ICULIB=E:\%_DEVDIR%\icu\lib
 
 rem settings for HUNSPELL
-SET _HUNSPELL_INCL=E:\OpenTM2Dev\hunspell\hunspell-1.3.2\src
+SET _HUNSPELL_INCL=E:\%_DEVDIR%\hunspell\hunspell-1.3.2\src
 SET HUNSPELLLIBDIR=%_DRIVE%\%_DEVDIR%\packages\lib
 
 

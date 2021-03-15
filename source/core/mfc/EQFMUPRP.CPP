@@ -61,6 +61,7 @@ int aiTagTypes[] = { SID_STARTDEL_TAG,     STARTDEL_TAG,
                      SID_ENDNEUTRAL_TAG,   ENDNEUTRAL_TAG,
                      0,                    0 };
 
+/*
 int aiSegBreakStyles[] = { SID_SEG_OFF,      SEG_OFF,
                            SID_SEG_NEUTRAL,  SEG_NEUTRAL,
                            SID_SEG_ON,       SEG_ON,
@@ -70,6 +71,19 @@ int aiSegBreakStyles[] = { SID_SEG_OFF,      SEG_OFF,
                            SID_PROTECT_ON,   PROTECT_ON,
                            SID_PROTECT_OFF,  PROTECT_OFF,
                            0,                0 };
+						   
+						   */
+						  
+int aiSegBreakStyles[] = { SID_SEG_OFF,      SEG_OFF,
+                           SID_SEG_NEUTRAL,  SEG_NEUTRAL,
+                           SID_SEG_ON,       SEG_ON,
+                           SID_SEG_RESET,    SEG_RESET,
+                           SID_SEG_LINE,     SEG_LINE,
+                           SID_PROTECT_ON,   PROTECT_ON,
+                           SID_PROTECT_OFF,  PROTECT_OFF,
+                           0,                0 };
+
+
 
 int aiAssTextStyles[] = { SID_TSL_TEXT,      TSL_TEXT,
                           SID_TSNL_TEXT,     TSNL_TEXT,

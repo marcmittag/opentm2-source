@@ -594,13 +594,13 @@ BOOL ConvertWordToXml( char *in, char *out, char *TempFile, char *ErrText, USHOR
     /*************************************************************************/
     *usFileFormat = FILE_FORMAT_UNKNOWN ;
     fInput = fopen( in, "rb" ) ;
-    if ( ( fInput ) &&
+   if ( ( fInput ) &&
          ( fgets( szIn, MAX_RCD_LENGTH, fInput ) != NULL ) ) {
        if ( strstr( szIn, "<?xml" ) ) 
           *usFileFormat = FILE_FORMAT_XML ;
        if ( ! strncmp( szIn, "PK", 5 ) ) 
           *usFileFormat = FILE_FORMAT_ZIP ;
-       if ( ! strncmp( szIn, "ÐÏà¡±", 6 ) ) 
+       if ( ! strncmp( szIn, "??", 6 ) ) 
           *usFileFormat = FILE_FORMAT_WORD ;
        if ( ! strncmp( szIn, "{\\rtf1\\", 7 ) ) {
           strcat( ErrText, "\nWord files using RTF cannot be handled by this markup table.\nUse EQFMSWRD instead." ) ;

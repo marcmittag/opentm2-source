@@ -302,7 +302,7 @@
 //    restricted length : 40 characters
 
 /* dalia (start) */
-#define STR_TB_AR_COLFONT_SAMPLETEXT   " ¥µõõ ¹+ Õ - Sample Text -  ¥µõõ ¹+ Õ"
+#define STR_TB_AR_COLFONT_SAMPLETEXT   " £¤¦Ì?? 1+ ? - Sample Text -  £¤¦Ì?? 1+ ?"
 #define STR_TB_COLFONT_SAMPLETEXT   "Sample Text - Sample Text - Sample Text"
 /* dalia (end) */
 

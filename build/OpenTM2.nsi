@@ -606,14 +606,14 @@ ${File} "WIN\" "OtmIsOpenTM2FXP.EXE"
 ${File} "WIN\" "TM2OTMMigrator.EXE"
 ${File} "WIN\" "OpenTMSHelper.jar"
 ${File} "WIN\" "EQFXLIFF.DLL"
-${File} "WIN\" "OtmMemoryService.EXE"
-${File} "WIN\" "OtmMemoryServiceGUI.EXE"
-IfFileExists "$INSTDIR\WIN\OtmMemoryService.conf" OMSConfExists 0
-${File} "WIN\" "OtmMemoryService.conf"
+;${File} "WIN\" "OtmMemoryService.EXE"
+;${File} "WIN\" "OtmMemoryServiceGUI.EXE"
+;IfFileExists "$INSTDIR\WIN\OtmMemoryService.conf" OMSConfExists 0
+;${File} "WIN\" "OtmMemoryService.conf"
 OMSConfExists:
 
-${File} "WIN\" "UNZIP.EXE"
-${File} "WIN\" "ZIP.EXE"
+;${File} "WIN\" "UNZIP.EXE"
+;${File} "WIN\" "ZIP.EXE"
 
 
 ${SetOutPath} "$INSTDIR\API"
